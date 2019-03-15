@@ -1,0 +1,56 @@
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+.form-user, .form-emails {
+	margin: 0 auto;
+	border-radius: 7px;
+	border: 1px solid #c0c7c4;
+	padding: 15px;
+	text-align: center;
+	height: 100%;
+
+	label.error-msg {
+		display: none;
+	}
+
+	input {
+		margin-bottom: 15px;
+
+		&.invalid {
+			margin-bottom: 3px;
+			background-color: #fbe4e7;
+			border: 2px solid #c10000;
+
+			&+label.error-msg {
+				display: block;
+				color: #c10000;
+				font-weight: 500;
+				text-align: left;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+h1 {
+	text-align: center;
+	margin: 30px auto 20px;
+}
+
+h2 {
+	margin: 100px auto 20px;
+}
+
+.text-email {
+	margin-bottom: 20px;
+	height: 150px;
+}
+
+.title-users {
+	text-align: center;
+}

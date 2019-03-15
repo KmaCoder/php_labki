@@ -2,7 +2,6 @@
 <html>
 <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
 <style>
 
@@ -39,26 +38,26 @@
     }
 </style>
 <body>
-<h1>Anagrams</h1>
+<h1>Anagrams using Express</h1>
 <table>
     <tr>
         <th>Word</th>
         <th>Count</th>
         <th>Anagrams</th>
     </tr>
-    <% data.forEach((anagram) => { %>
+    <% for (let [word, massive] of Object.entries(data)) { %>
         <tr>
             <td>
-                <%= anagram[0] %>
+                <%= word %>
             </td>
             <td>
-                <%= anagram.length %>
+                <%= massive.length %>
             </td>
             <td>
-                <%= anagram.join(', ') %>
+                <%= massive.join(', ') %>
             </td>
         </tr>
-    <% }); %>
+    <% } %>
 </table>
 </body>
 </html>

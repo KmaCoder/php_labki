@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>LABA</h1>
+<div class="container">
+    <div class="row row-eq-height">
+        <div class="col-md-6">
+            <form class="form-user">
+                <input name="email" placeholder="Email" type="email" class="form-control"/>
+                <label for="email" class="error-msg"></label>
+
+                <input name="login" placeholder="Login" type="text" class="form-control"/>
+                <label for="login" class="error-msg"></label>
+
+                <input name="password" placeholder="Password" type="password" class="form-control"/>
+                <label for="password" class="error-msg"></label>
+
+                <input name="password_confirm" placeholder="Confirm password" type="password" class="form-control"/>
+                <label for="password_confirm" class="error-msg"></label>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-emails">
+                <textarea name="message" placeholder="Email text" class="form-control text-email"></textarea>
+                <button type="submit" class="btn btn-primary">Send emails</button>
+            </form>
+        </div>
+    </div>
+
+
+    <h2 class="title-users">Users: </h2>
+
+    <table class="table table-bordered table-users">
+        <thead>
+        <tr>
+            <th scope="col">Email</th>
+            <th scope="col">Login</th>
+        </tr>
+        </thead>
+        <% users.forEach(function(user) { %>
+            <tr class="tr-user">
+                <td><%= user.email %></td>
+                <td><%= user.login %></td>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/javascripts/main.js"></script>
+</body>
+</html>
